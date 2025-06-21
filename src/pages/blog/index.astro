@@ -1,0 +1,60 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { Image } from "astro:assets";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="max-w-[60rem]">
+      <section>
+        <ul class="flex list-none flex-wrap gap-8 max-[720px]:gap-2">
+          {
+            posts.map((post, index) => (
+              <li
+                class={`w-[calc(50%_-_1rem)] first:mb-4 first:w-full first:text-center max-[720px]:w-full max-[720px]:text-center ${index === 0 ? "max-[720px]:mb-0" : ""}`}
+              >
+                <a
+                  class="block transition-all duration-200"
+                  href={`/blog/${post.id}/`}
+                >
+                  {post.data.heroImage && (
+                    <Image
+                      class="hover:shadow-elevated-primary-700 hover:dark:shadow-elevated-primary-300 mb-2 w-full rounded-xl"
+                      width={720}
+                      height={360}
+                      src={post.data.heroImage}
+                      alt=""
+                    />
+                  )}
+                  <h4
+                    class={`text-primary-800 dark:text-primary-200 hover:text-tertiary-800 hover:dark:text-primary-200 max-[720px]:text-2xl ${index === 0 ? "text-4xl" : ""}`}
+                  >
+                    {post.data.title}
+                  </h4>
+                  <p class="text-secondary-700 dark:text-secondary-300 hover:text-tertiary-800 hover:dark:text-tertiary-200">
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

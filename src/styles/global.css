@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "./colors.css";
+
+@theme {
+  --shadow-elevated-primary-700:
+    0 2px 6px rgb(var(--color-primary-700) / 0.25),
+    0 8px 24px rgb(var(--color-primary-700) / 0.33),
+    0 16px 32px rgb(var(--color-primary-700) / 0.33);
+  --shadow-elevated-primary-300:
+    0 2px 6px rgb(var(--color-primary-300) / 0.25),
+    0 8px 24px rgb(var(--color-primary-300) / 0.33),
+    0 16px 32px rgb(var(--color-primary-300) / 0.33);
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    font-family: "Atkinson", sans-serif;
+    @apply text-primary-800 dark:text-primary-200 bg-primary-50 dark:bg-primary-950 text-xl leading-relaxed break-words;
+  }
+
+  main {
+    @apply mx-auto px-4 py-12;
+    max-width: 46.25rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-primary-800 dark:text-primary-200 mb-2 font-bold;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  strong,
+  b {
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-tertiary-800 dark:text-tertiary-200;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  .prose p {
+    @apply mb-8;
+  }
+
+  textarea {
+    @apply w-full text-base;
+  }
+
+  input {
+    @apply text-base;
+  }
+
+  table {
+    @apply my-6 w-full table-auto border-collapse text-left;
+    font-family: "Atkinson", sans-serif;
+  }
+
+  thead {
+    @apply bg-primary-200 dark:bg-primary-800;
+  }
+
+  th,
+  td {
+    @apply border-primary-200 dark:border-primary-800 border px-4 py-2;
+  }
+
+  td > em {
+    @apply italic;
+  }
+
+  td > strong {
+    @apply font-bold;
+  }
+
+  td > code {
+    @apply bg-primary-200 dark:bg-primary-800 rounded-sm px-1 py-0.5 font-mono text-base;
+  }
+
+  img {
+    @apply h-auto max-w-full rounded-lg;
+  }
+
+  code {
+    @apply bg-primary-200 dark:bg-primary-800 rounded-sm px-1 py-0.5;
+  }
+
+  pre {
+    @apply mb-2 rounded-lg p-6;
+  }
+
+  pre > code {
+    all: unset;
+  }
+
+  blockquote {
+    @apply border-tertiary-800 dark:border-tertiary-200 border-l-4 pl-5 text-xl;
+  }
+
+  hr {
+    @apply border-primary-200 dark:border-primary-800 border-t;
+  }
+
+  @media (max-width: 720px) {
+    body {
+      @apply text-lg;
+    }
+
+    main {
+      @apply p-4;
+    }
+  }
+}
