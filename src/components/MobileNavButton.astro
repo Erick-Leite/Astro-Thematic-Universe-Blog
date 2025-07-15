@@ -1,0 +1,62 @@
+---
+interface Props {
+  id: string;
+  class: string;
+  ariaControls: string;
+}
+
+const { id, class: className, ariaControls } = Astro.props;
+---
+
+<button
+  {id}
+  class={`group relative ${className}`}
+  aria-label="Abrir menu"
+  aria-expanded="false"
+  aria-controls={ariaControls}
+  data-toggle-menu
+>
+  <!-- Ícone Abrir menu -->
+  <svg
+    class="pointer-events-auto absolute inset-0 size-full opacity-100 transition-opacity duration-200 ease-in-out group-[.open]:pointer-events-none group-[.open]:opacity-0"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    aria-hidden="true"
+    data-slot="icon"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+  </svg>
+  <!-- Ícone Fechar menu -->
+  <svg
+    class="pointer-events-none absolute inset-0 size-full opacity-0 transition-opacity duration-200 ease-in-out group-[.open]:pointer-events-auto group-[.open]:opacity-100"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    aria-hidden="true"
+    data-slot="icon"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M6 18 18 6M6 6l12 12"></path>
+  </svg>
+</button>
+
+<script>
+  const toggleButton = document.querySelector("[data-toggle-menu]");
+
+  toggleButton?.addEventListener("click", () => {
+    const isOpen = toggleButton.classList.toggle("open");
+    toggleButton.setAttribute(
+      "aria-label",
+      isOpen ? "Fechar menu" : "Abrir menu"
+    );
+    toggleButton.setAttribute("aria-expanded", isOpen.toString());
+  });
+</script>
