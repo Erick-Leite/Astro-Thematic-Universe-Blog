@@ -1,6 +1,6 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
+// Importa o arquivo global.css aqui para que ele seja incluído
+// em todas as páginas por meio do componente <BaseHead />
 import "../styles/global.css";
 import { SITE_TITLE } from "../consts";
 import FallbackImage from "../assets/blog-placeholder-1.jpg";
@@ -12,12 +12,24 @@ interface Props {
   image?: ImageMetadata;
 }
 
+// Cria a URL canônica com base no caminho atual e na URL base do site
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
+// Desestrutura as props e usa uma imagem padrão se nenhuma for fornecida
 const { title, description, image = FallbackImage } = Astro.props;
 ---
 
-<!-- Global Metadata -->
+<!-- Inicializa o tema do site -->
+<script is:inline>
+  document.documentElement.classList.toggle(
+    "dark",
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+</script>
+
+<!-- Metadados globais -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -30,7 +42,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Font preloads -->
+<!-- Pré-carregamento das fontes -->
 <link
   rel="preload"
   href="/fonts/atkinson-regular.woff"
@@ -46,10 +58,10 @@ const { title, description, image = FallbackImage } = Astro.props;
   crossorigin
 />
 
-<!-- Canonical URL -->
+<!-- URL canônica -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
+<!-- Metadados principais -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
