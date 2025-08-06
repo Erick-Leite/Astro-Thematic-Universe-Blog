@@ -1,0 +1,48 @@
+---
+import { authorsData } from "../../data/authorsData";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import { Image } from "astro:assets";
+import Footer from "../../components/Footer.astro";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (() => {
+  return authorsData.map(({ slug, name, avatar, bio }) => ({
+    params: { author: slug },
+    props: {
+      name,
+      avatar,
+      bio,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { name, avatar, bio } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <BaseHead title={`Perfil de ${name}`} description={bio} />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <div
+        class="bg-primary-400 flex flex-col items-center justify-center gap-4 rounded-md p-4 grayscale-100"
+      >
+        <Image src={avatar} alt={name} height={200} width={200} />
+        <h1 class="text-primary-200 text-center text-4xl font-semibold">
+          {name}
+        </h1>
+        <p class="text-primary-200 text-center text-xl font-semibold">
+          {bio}
+        </p>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>
