@@ -23,7 +23,8 @@
     "lint-staged": "^16.1.2",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.13"
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "tailwind-scrollbar": "^4.0.2"
   },
   "lint-staged": {
     "*.+(js|ts|mjs|json|md|mdx|css)": [
