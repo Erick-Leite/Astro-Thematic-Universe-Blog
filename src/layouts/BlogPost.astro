@@ -6,13 +6,24 @@ import Comments from "../components/Comments.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
+import type { AuthorData } from "../data/authorsData";
+import { authorsData } from "../data/authorsData";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+  title,
+  description,
+  category,
+  authorsNames,
+  pubDate,
+  updatedDate,
+  heroImage,
+  heroImageAlt,
+} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <BaseHead title={title} description={description} />
   </head>
@@ -21,32 +32,60 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <Header />
     <main>
       <article class="mb-4">
-        <div>
-          {
-            heroImage && (
-              <Image
-                class="shadow-elevated-primary-700 dark:shadow-elevated-primary-300 mx-auto block rounded-xl"
-                width={1020}
-                height={510}
-                src={heroImage}
-                alt=""
-              />
-            )
-          }
-        </div>
-        <div class="text-primary-800 dark:text-primary-200 m-auto p-4">
-          <div class="mb-4 py-4 text-center">
+        <p class="text-center text-2xl font-bold">{category}</p>
+
+        <Image
+          class="shadow-elevated-primary-700 dark:shadow-elevated-primary-300 mx-auto block rounded-xl"
+          width={1020}
+          height={510}
+          src={heroImage}
+          alt={heroImageAlt}
+        />
+
+        <div class="m-auto p-4">
+          <div class="mb-2 pb-4 text-center">
+            <h1 class="my-2">{title}</h1>
+
             <div class="text-secondary-700 dark:text-secondary-300 mb-2">
               <FormattedDate date={pubDate} />
               {
                 updatedDate && (
                   <div class="italic">
-                    Last updated on <FormattedDate date={updatedDate} />
+                    Última atualização em <FormattedDate date={updatedDate} />
                   </div>
                 )
               }
             </div>
-            <h1 class="mb-2">{title}</h1>
+
+            <div
+              class="after:from-primary-50 dark:after:from-primary-950 relative after:absolute after:inset-y-0 after:right-0 after:w-1 after:bg-gradient-to-l after:to-transparent"
+            >
+              <div class="mb-2 overflow-x-auto py-2">
+                {
+                  authorsNames.map((authorName) => {
+                    const { slug, name, avatar } = authorsData.find(
+                      ({ name }) => name === authorName
+                    ) as AuthorData;
+
+                    return (
+                      <a href={`/author/${slug}`} class="mr-4 flex gap-2">
+                        <Image
+                          src={avatar}
+                          alt=""
+                          height={254}
+                          width={254}
+                          class="size-10 rounded-full"
+                        />
+                        <p class="text-primary-800 dark:text-primary-200 my-auto whitespace-nowrap">
+                          {name}
+                        </p>
+                      </a>
+                    );
+                  })
+                }
+              </div>
+            </div>
+
             <hr />
           </div>
           <slot />
