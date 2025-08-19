@@ -8,12 +8,12 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import { Image } from "astro:assets";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -37,7 +37,7 @@ const posts = (await getCollection("blog")).sort(
                       width={720}
                       height={360}
                       src={post.data.heroImage}
-                      alt=""
+                      alt={post.data.heroImageAlt}
                     />
                   )}
                   <h4
@@ -45,9 +45,13 @@ const posts = (await getCollection("blog")).sort(
                   >
                     {post.data.title}
                   </h4>
-                  <p class="text-secondary-700 dark:text-secondary-300 hover:text-tertiary-800 hover:dark:text-tertiary-200">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
+                  <div class="text-secondary-700 dark:text-secondary-300 flex justify-between gap-4 overflow-x-auto px-4">
+                    <p>{post.data.category}</p>
+
+                    <p class="text-secondary-700 dark:text-secondary-300 hover:text-tertiary-800 hover:dark:text-tertiary-200">
+                      <FormattedDate date={post.data.pubDate} />
+                    </p>
+                  </div>
                 </a>
               </li>
             ))
