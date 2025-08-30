@@ -1,8 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
-import { authorsData } from "./data/authorsData";
-
-const defaultAuthorName = authorsData[0].name;
+import { AUTHOR } from "./consts";
 
 const blog = defineCollection({
   // Load Markdown and MDX files in the `src/content/blog/` directory.
@@ -12,7 +10,7 @@ const blog = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      authorsNames: z.array(z.string()).default([defaultAuthorName]),
+      authorsNames: z.array(z.string()).default([AUTHOR]),
       category: z.string(),
       // Transform string to Date object
       pubDate: z.coerce.date(),
@@ -22,4 +20,14 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const authors = defineCollection({
+  loader: glob({ base: "./src/content/authors", pattern: "**/*.{md,mdx}" }),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      avatar: image(),
+      bio: z.string(),
+    }),
+});
+
+export const collections = { blog, authors };
