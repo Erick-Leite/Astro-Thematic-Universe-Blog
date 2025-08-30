@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { render } from "astro:content";
+import Author from "../../layouts/Author.astro";
+
+type Props = {
+  author: CollectionEntry<"authors">;
+};
+
+export const getStaticPaths = (async () => {
+  const authors = await getCollection("authors");
+
+  return authors.map((author) => ({
+    params: { slug: author.id },
+    props: {
+      author,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { author } = Astro.props;
+
+const { Content } = await render(author);
+---
+
+<Author {...author.data}><Content /></Author>
