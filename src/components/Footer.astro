@@ -1,16 +1,14 @@
 ---
-import { authorsData } from "../data/authorsData";
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE, AUTHOR } from "../consts";
 import { X, GitHub, Gmail } from "./social-icons";
 
-const { name } = authorsData[0];
 const today = new Date();
 ---
 
 <footer
   class="text-secondary-700 dark:text-secondary-300 pt-8 pr-4 pb-24 pl-4 text-center"
 >
-  {name} • &copy; {today.getFullYear()} • {SITE_TITLE}
+  {AUTHOR} • &copy; {today.getFullYear()} • {SITE_TITLE}
   <div class="mt-4 flex justify-center gap-4">
     <a
       class="text-secondary-700 hover:text-secondary-900 dark:text-secondary-300 hover:dark:text-secondary-100"
