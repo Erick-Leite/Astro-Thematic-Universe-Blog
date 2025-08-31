@@ -6,10 +6,10 @@ import Comments from "../components/Comments.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
-import type { AuthorData } from "../data/authorsData";
-import { authorsData } from "../data/authorsData";
+import { getCollection } from "astro:content";
 
 type Props = CollectionEntry<"blog">["data"];
+type Author = CollectionEntry<"authors">;
 
 const {
   title,
@@ -21,6 +21,8 @@ const {
   heroImage,
   heroImageAlt,
 } = Astro.props;
+
+const authors = await getCollection("authors");
 ---
 
 <html lang="pt-BR">
@@ -60,24 +62,27 @@ const {
             <div
               class="after:from-primary-50 dark:after:from-primary-950 relative after:absolute after:inset-y-0 after:right-0 after:w-1 after:bg-gradient-to-l after:to-transparent"
             >
-              <div class="mb-2 overflow-x-auto py-2">
+              <div class="mb-2 flex gap-4 overflow-x-auto py-2">
                 {
                   authorsNames.map((authorName) => {
-                    const { slug, name, avatar } = authorsData.find(
-                      ({ name }) => name === authorName
-                    ) as AuthorData;
+                    const author = authors.find(
+                      (author) => author.data.name === authorName
+                    ) as Author;
 
                     return (
-                      <a href={`/author/${slug}`} class="mr-4 flex gap-2">
+                      <a
+                        href={`/author/${author.id}`}
+                        class="inline-flex shrink-0 gap-2"
+                      >
                         <Image
-                          src={avatar}
+                          src={author.data.avatar}
                           alt=""
                           height={254}
                           width={254}
                           class="size-10 rounded-full"
                         />
                         <p class="text-primary-800 dark:text-primary-200 my-auto whitespace-nowrap">
-                          {name}
+                          {author.data.name}
                         </p>
                       </a>
                     );
