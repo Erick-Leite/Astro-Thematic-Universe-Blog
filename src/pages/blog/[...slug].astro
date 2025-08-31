@@ -2,7 +2,6 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
 import { render } from "astro:content";
-import { authorsData } from "../../data/authorsData";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -11,17 +10,22 @@ export async function getStaticPaths() {
     props: post,
   }));
 }
+
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 
-// Assegurar que os nomes dos autores listados no post realmente existam na lista de dados dos autores
+const authors = await getCollection("authors");
+
+// Assegurar que todos os autores presentes no post existam na coleção de autores.
 post.data.authorsNames.forEach((authorName) => {
-  const authorExists = authorsData.some(({ name }) => name === authorName);
+  const authorExists = authors.some(
+    (author) => author.data.name === authorName
+  );
 
   if (!authorExists) {
     throw new Error(
-      `Autor '${authorName}' não encontrado em 'data/authorsData.ts'.`
+      `Autor '${authorName}' não encontrado em 'src/content/authors'.`
     );
   }
 });
