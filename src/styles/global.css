@@ -142,6 +142,10 @@
     @apply border-primary-200 dark:border-primary-800 border-t;
   }
 
+  ul {
+    @apply mb-4;
+  }
+
   @media (max-width: 720px) {
     body {
       @apply text-lg;
