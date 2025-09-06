@@ -85,7 +85,16 @@
   }
 
   table {
-    @apply font-roboto-variable my-6 w-full table-auto border-collapse text-left;
+    @apply font-roboto-variable my-6 block w-full border-collapse overflow-x-auto text-left;
+  }
+
+  thead,
+  tbody {
+    @apply table w-full;
+  }
+
+  tr {
+    @apply table-row min-w-full;
   }
 
   thead {
