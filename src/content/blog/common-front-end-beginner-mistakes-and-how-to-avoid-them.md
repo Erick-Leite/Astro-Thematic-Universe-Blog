@@ -3,7 +3,7 @@ title: "Erros comuns de iniciantes no Front-End e como evitá-los"
 description: "Descubra os erros comuns de iniciantes no Front-End e como evitá-los."
 category: "Programação"
 authors: ["Pedro Erick"]
-heroImage: "../../assets/correct-and-incorrect-html-code.jpg"
+heroImage: "../../assets/Código-HTML-correto-e-incorreto.jpg"
 heroImageAlt: "Ilustração de um computador mostrando exemplos de código HTML incorreto e correto. O incorreto usa tags em maiúsculas e texto sem parágrafo, enquanto o correto usa tags em minúsculas e envolve o texto dentro da tag <p>."
 pubDate: "Sep 06 2025"
 ---

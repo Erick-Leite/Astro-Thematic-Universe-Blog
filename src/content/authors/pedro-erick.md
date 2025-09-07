@@ -1,6 +1,6 @@
 ---
 name: "Pedro Erick"
-avatar: "../../assets/authors/pedro-erick.jpg"
+avatar: "../../assets/authors/Pedro-Erick.jpg"
 bio: "Pedro Erick é desenvolvedor front-end e o dono do Blog Universo Temático."
 ---
 
