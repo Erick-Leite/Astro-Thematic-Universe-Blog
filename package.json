@@ -2,6 +2,12 @@
   "name": "thematic-universe-blog",
   "type": "module",
   "version": "0.0.1",
+  "author": {
+    "name": "Pedro Erick",
+    "email": "erickleite338@gmail.com",
+    "url": "https://thematic-universe-blog.netlify.app/author/pedro-erick"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
