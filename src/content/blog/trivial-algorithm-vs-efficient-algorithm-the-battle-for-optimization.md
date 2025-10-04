@@ -5,6 +5,7 @@ category: "Programação"
 heroImage: "../../assets/Tartaruga-vs-Foguete-A-Batalha-dos-Algoritmos.jpg"
 heroImageAlt: "Ilustração comparando algoritmos: à esquerda, uma tartaruga robótica representando o “Algoritmo Trivial”; à direita, um foguete luminoso azul representando o “Algoritmo Eficiente”. No centro, a palavra “VS” em destaque como em um pôster de luta, simbolizando o confronto entre soluções lentas e rápidas em computação."
 pubDate: "Oct 03 2025"
+updatedDate: "Oct 03 2025"
 ---
 
 # Algoritmo Trivial vs Algoritmo Eficiente: A Batalha pela Otimização! 🚀
@@ -18,6 +19,26 @@ Antes de mergulharmos nos códigos, vamos alinhar os conceitos. Um **algoritmo t
 Já o **algoritmo eficiente** é o supercarro moderno: usa técnicas inteligentes para reduzir tempo e recursos. Ele considera complexidade assintótica (como O(n) vs O(n²)), aproveita estruturas de dados e estratégias como divisão e conquista ou memoização. O resultado? Soluções que escalam bem, ideais para o mundo real, onde dados crescem exponencialmente. 💥
 
 Por que isso importa? Em uma era de big data e IA, eficiência não é luxo — é necessidade! Vamos ilustrar com exemplos reais, começando por buscas, ordenações e mais. Cada seção trará códigos triviais e eficientes para você comparar. Vamos nessa? 🚀
+
+<details>
+  <summary>
+    <h2>Índice de Batalhas pela Otimização</h2>
+  </summary>
+  
+  <ul>
+    <li><a href="#exemplo-1-busca-em-uma-lista--linear-vs-binária">Exemplo 1</a>: Busca em uma Lista — <a href="#versão-trivial-busca-linear">Linear</a> vs <a href="#versão-eficiente-busca-binária">Binária</a> 🔍</li>
+    <li><a href="#exemplo-2-ordenação-de-elementos--bubble-sort-vs-quick-sort--vs">Exemplo 2</a>: Ordenação de Elementos — <a href="#versão-trivial-bubble-sort">Bubble Sort</a> vs <a href="#versão-eficiente-quick-sort">Quick Sort</a> 🛁 vs ⚡</li>
+    <li><a href="#exemplo-3-sequência-de-fibonacci--recursivo-vs-iterativo-">Exemplo 3</a>: Sequência de Fibonacci — <a href="#versão-trivial-fibonacci-recursivo">Recursivo</a> vs <a href="#versão-eficiente-fibonacci-iterativo">Iterativo</a> 🐇</li>
+    <li><a href="#exemplo-4-verificação-de-primalidade--simples-vs-otimizada">Exemplo 4</a>: Verificação de Primalidade — <a href="#versão-trivial-primalidade-simples">Simples</a> vs <a href="#versão-eficiente-primalidade-otimizada">Otimizada</a> 🔢</li>
+    <li><a href="#exemplo-5-cálculo-de-exponenciação--multiplicação-repetida-vs-binária">Exemplo 5</a>: Cálculo de Exponenciação — <a href="#versão-trivial-multiplicação-repetida">Multiplicação Repetida</a> vs <a href="#versão-eficiente-exponenciação-binária">Binária</a> 🔢</li>
+    <li><a href="#exemplo-6-soma-máxima-de-subarray--força-bruta-vs-kadane-">Exemplo 6</a>: Soma Máxima de Subarray — <a href="#versão-trivial-força-bruta">Força Bruta</a> vs <a href="#versão-eficiente-algoritmo-de-kadane">Kadane</a> 📊</li>
+    <li><a href="#exemplo-7-verificação-de-anagramas--ordenação-vs-contagem-de-frequências-">Exemplo 7</a>: Verificação de Anagramas — <a href="#versão-trivial-usando-ordenação">Ordenação</a> vs <a href="#versão-eficiente-contagem-de-frequências">Contagem de Frequências</a> 🔤</li>
+    <li><a href="#exemplo-8-detecção-de-ciclos-em-grafos--busca-em-profundidade-vs-union-find-">Exemplo 8</a>: Detecção de Ciclos em Grafos — <a href="#versão-trivial-dfs-para-detecção-de-ciclos">Busca em Profundidade</a> vs <a href="#versão-eficiente-union-find-com-path-compression">Union-Find</a> 🚀</li>
+    <li><a href="#exemplo-9-cálculo-do-maior-divisor-comum-mdc--subtração-repetida-vs-euclidiano-">Exemplo 9</a>: Cálculo do Maior Divisor Comum (MDC) — <a href="#versão-trivial-subtração-repetida">Subtração Repetida</a> vs <a href="#versão-eficiente-algoritmo-de-euclides">Euclidiano</a> 🔢</li>
+    <li><a href="#exemplo-10-detecção-de-duplicados-em-lista--força-bruta-vs-conjunto-hash-️">Exemplo 10</a>: Detecção de Duplicados em Lista — <a href="#versão-trivial-comparação-de-pares">Força Bruta</a> vs <a href="#versão-eficiente-usando-conjunto">Conjunto Hash</a> 🕵️</li>
+    <li>Conclusão: <a href="#por-que-escolher-eficiência-e-quando-o-trivial-basta">Por Que Escolher Eficiência? E Quando o Trivial Basta? 💡</a></li>
+  </ul>
+</details>
 
 ## Exemplo 1: Busca em uma Lista — Linear vs Binária 🔍
 
@@ -506,4 +527,4 @@ Mesmo teste: True, mas em tempo linear — ideal para grandes datasets! 📊
 
 Em resumo, algoritmos triviais são ótimos para protótipos ou dados pequenos — rápidos de codar e fáceis de depurar. Mas para escalabilidade, os eficientes reinam supremos. Pense em apps como Google Search ou Netflix: eficiência é o segredo do sucesso! 📱
 
-Lembre-se: analise sempre a complexidade (Big O) e teste com dados reais. Com esses exemplos, você está armado para otimizar seus projetos. Experimente os códigos, ajuste e veja a diferença! Qual será seu próximo desafio? 🚀😊
+Lembre-se: analise sempre a complexidade (Big O) e teste com dados reais. Com esses exemplos, você está armado para otimizar seus projetos. Experimente os códigos, ajuste e veja a diferença! Com esses insights, qual problema complexo você está pronto para resolver com um algoritmo eficiente? 🚀😊
