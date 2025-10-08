@@ -22,7 +22,7 @@ Por que isso importa? Em uma era de big data e IA, eficiência não é luxo — 
 
 <details>
   <summary>
-    <h2>Índice de Batalhas pela Otimização</h2>
+    Índice de Batalhas pela Otimização
   </summary>
   
   <ul>
