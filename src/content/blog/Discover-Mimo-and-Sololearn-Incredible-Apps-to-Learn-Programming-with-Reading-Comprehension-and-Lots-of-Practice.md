@@ -2,7 +2,7 @@
 title: "Descubra Mimo e Sololearn: Apps Incríveis para Aprender Programação com Leitura, Compreensão e Muita Prática!"
 description: "Aprenda programação com Mimo e Sololearn! Apps gamificados com cursos em Python, JavaScript e mais. Leitura, compreensão e prática para iniciantes e intermediários."
 category: "Programação"
-heroImage: "../../assets/Mimo-Sololearn-Aprendizado-Programação.jpg"
+heroImage: "@assets/blog/Mimo-Sololearn-Aprendizado-Programação.jpg"
 heroImageAlt: "Ilustração vibrante de um jovem programador digitando em um laptop, com linhas de código coloridas na tela. Ao seu redor flutuam dois ícones que lembram, mas não são idênticos, aos logotipos dos aplicativos Mimo e Sololearn, representando plataformas de aprendizado digital. O fundo em tons de azul, roxo e laranja cria uma atmosfera moderna e criativa, destacando o entusiasmo pelo estudo de programação."
 pubDate: "Oct 13 2025"
 ---

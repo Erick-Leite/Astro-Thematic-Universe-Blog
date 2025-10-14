@@ -2,7 +2,7 @@
 title: "Algoritmo Trivial vs Algoritmo Eficiente: A Batalha pela Otimização!"
 description: "Uma comparação detalhada entre algoritmos triviais e eficientes, com exemplos práticos em Python para ilustrar a importância da otimização em programação."
 category: "Programação"
-heroImage: "../../assets/Tartaruga-vs-Foguete-A-Batalha-dos-Algoritmos.jpg"
+heroImage: "@assets/blog/Tartaruga-vs-Foguete-A-Batalha-dos-Algoritmos.jpg"
 heroImageAlt: "Ilustração comparando algoritmos: à esquerda, uma tartaruga robótica representando o “Algoritmo Trivial”; à direita, um foguete luminoso azul representando o “Algoritmo Eficiente”. No centro, a palavra “VS” em destaque como em um pôster de luta, simbolizando o confronto entre soluções lentas e rápidas em computação."
 pubDate: "Oct 03 2025"
 updatedDate: "Oct 03 2025"

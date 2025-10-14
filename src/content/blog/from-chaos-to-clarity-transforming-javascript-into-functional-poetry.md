@@ -2,7 +2,7 @@
 title: "Do caos à clareza: transformando JavaScript em poesia funcional"
 description: "Do imperativo ao funcional: aprenda a escrever JavaScript mais limpo, reutilizável e poético. Explore funções puras, imutabilidade, currying e async/await com exemplos reais."
 category: "Programação"
-heroImage: "../../assets/Do-Caos-à-Clareza-Transformando-JavaScript-em-Poesia-Funcional.jpg"
+heroImage: "@assets/blog/Do-Caos-à-Clareza-Transformando-JavaScript-em-Poesia-Funcional.jpg"
 heroImageAlt: "Ilustração com o título 'Do Caos à Clareza: Transformando JavaScript em Poesia Funcional'. À esquerda, um emaranhado de linhas pretas com o logotipo 'JS' no centro, representando o caos. Uma seta aponta para a direita, onde há um pergaminho com uma pena e notas musicais, simbolizando poesia. No pergaminho, está escrito em código JavaScript: 'const poem = compose(toUpperCase, join(''), map(reverse));'."
 pubDate: "Sep 10 2025"
 ---
