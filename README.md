@@ -1,68 +1,84 @@
-# Astro Starter Kit: Blog
+# Blog Universo Temático
 
-```sh
-npm create astro@latest -- --template blog
+Criei o _Blog Universo Temático_ como um espaço para explorar e compartilhar ideias sobre os mais diversos assuntos — da tecnologia à ciência, passando por física, química e tudo o que desperta curiosidade e admiração pelo conhecimento.
+
+## 🚀 Demonstração ao Vivo
+
+Você pode conferir a versão ao vivo do blog em: [https://thematic-universe-blog.netlify.app/](https://thematic-universe-blog.netlify.app/)
+
+## ✨ Funcionalidades
+
+- **Múltiplos Autores:** Os artigos podem ser escritos por mais de uma pessoa.
+- **Design Responsivo:** Experiência de leitura otimizada para desktops, tablets e dispositivos móveis.
+- **Modo Escuro e Claro:** Personalize a aparência do blog de acordo com suas preferências.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Astro:** Framework web para a construção de sites rápidos e orientados a conteúdo.
+- **Tailwind CSS:** Framework CSS utilitário para a criação de designs personalizados.
+- **MDX:** Permite o uso de componentes JSX em arquivos Markdown.
+- **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática.
+
+## 🏁 Começando
+
+Se você deseja configurar o projeto localmente, siga as instruções abaixo.
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/pt/) (Recomendação: v22 ou superior)
+- [npm](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
+
+### Instalação
+
+1. Clone o repositório do projeto:
+
+   ```bash
+   git clone https://github.com/Erick-Leite/Astro-Thematic-Universe-Blog.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd Astro-Thematic-Universe-Blog
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+### Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento, execute:
+
+```bash
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+Em seguida, abra [http://localhost:4321](http://localhost:4321) no seu navegador para visualizar o blog.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📜 Scripts
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+| Script    | Descrição                                    |
+| :-------- | :------------------------------------------- |
+| `dev`     | Inicia o servidor de desenvolvimento.        |
+| `build`   | Compila o projeto para produção.             |
+| `preview` | Permite visualizar a compilação de produção. |
+| `astro`   | Executa comandos da CLI do Astro.            |
 
-Features:
+## 🤝 Contribuições
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Se você tiver ideias, sugestões ou correções, sinta-se à vontade para abrir uma _issue_ ou enviar um _pull request_ no repositório.
 
-## 🚀 Project Structure
+## 📄 Licença
 
-Inside of your Astro project, you'll see the following folders and files:
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE.txt](LICENSE.txt) para mais detalhes.
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+## 👨‍💻 Autor
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+**Pedro Erick**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- **Email:** [erickleite338@gmail.com](mailto:erickleite338@gmail.com)
+- **Website:** [https://thematic-universe-blog.netlify.app/author/pedro-erick](https://thematic-universe-blog.netlify.app/author/pedro-erick)
