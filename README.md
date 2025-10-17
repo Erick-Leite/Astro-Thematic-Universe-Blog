@@ -4,7 +4,7 @@ Criei o _Blog Universo Temático_ como um espaço para explorar e compartilhar i
 
 ## 🚀 Demonstração ao Vivo
 
-Você pode conferir a versão ao vivo do blog em: [https://thematic-universe-blog.netlify.app/](https://thematic-universe-blog.netlify.app/)
+Você pode conferir a versão ao vivo do blog em: [https://thematic-universe-blog.com/](https://thematic-universe-blog.com/)
 
 ## ✨ Funcionalidades
 
@@ -81,4 +81,4 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE.tx
 **Pedro Erick**
 
 - **Email:** [erickleite338@gmail.com](mailto:erickleite338@gmail.com)
-- **Website:** [https://thematic-universe-blog.netlify.app/author/pedro-erick](https://thematic-universe-blog.netlify.app/author/pedro-erick)
+- **Website:** [https://thematic-universe-blog.com/author/pedro-erick](https://thematic-universe-blog.com/author/pedro-erick)
