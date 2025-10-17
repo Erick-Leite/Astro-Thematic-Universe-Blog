@@ -2,10 +2,10 @@
 # veja: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
   # Qual canal do nixpkgs usar.
-  channel = "stable-24.05"; # ou "unstable"
+  channel = "stable-24.11"; # ou "unstable"
 
   # Use https://search.nixos.org/packages para encontrar pacotes
-  packages = [ pkgs.nodejs_22 ];
+  packages = [ pkgs.nodejs_23 ];
 
   # Define variáveis de ambiente no espaço de trabalho
   env = { };
