@@ -1,7 +1,7 @@
 ---
 title: "Fundamentos dos modelos de linguagem (LMs) e LLMs"
 description: "Explore os fundamentos dos modelos de linguagem (LMs) e grandes modelos de linguagem (LLMs): desde o mecanismo de previsão e arquiteturas baseadas em transformers até suas capacidades, limitações e aplicações práticas em diversos setores."
-category: "Inteligência artificial"
+category: "Inteligência Artificial"
 heroImage: "@assets/blog/Fundamentos-LM-LLM-cérebro-rede-neural.jpg"
 heroImageAlt: "Imagem digital com fundo azul escuro degradê e elementos luminosos em tons de ciano. No centro superior, em letras grandes brancas com contorno neon, está escrito “FUNDAMENTOS DOS MODELOS DE LINGUAGEM (LMs) E (LLMs)”. Abaixo do título, ocupa a maior parte da composição uma ilustração estilizada de um cérebro humano formado por uma rede neural artificial: dezenas de pontos luminosos (nós) interligados por linhas finas brilhantes, criando uma malha tridimensional que lembra conexões sinápticas. Ao redor do cérebro e espalhadas pelo fundo, aparecem palavras semi-transparentes em baixa opacidade, misturando português e inglês relacionadas ao tema, como “dados”, “text”, “the”, “que”, “computer”, “language”, “base”, “die”, “python”, “ser”, “todos”, “logica”, entre outras. O conjunto transmite visualmente a ideia de inteligência artificial, processamento de linguagem natural e aprendizado profundo, com estética tecnológica futurista."
 pubDate: "Nov 28 2025"
