@@ -19,13 +19,13 @@ const posts = (await getCollection("blog")).sort(
   </head>
   <body>
     <Header />
-    <main class="max-w-[60rem]">
+    <main class="max-w-240">
       <section>
         <ul class="flex list-none flex-wrap gap-8 max-[720px]:gap-2">
           {
             posts.map((post, index) => (
               <li
-                class={`w-[calc(50%_-_1rem)] first:mb-4 first:w-full first:text-center max-[720px]:w-full max-[720px]:text-center ${index === 0 ? "max-[720px]:mb-0" : ""}`}
+                class={`w-[calc(50%-1rem)] first:mb-4 first:w-full first:text-center max-[720px]:w-full max-[720px]:text-center ${index === 0 ? "max-[720px]:mb-0" : ""}`}
               >
                 <a
                   class="block transition-all duration-200"

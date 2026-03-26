@@ -39,11 +39,11 @@ import SwitchTheme from "./SwitchTheme.astro";
         >
       </div>
 
-      <div class="inline-flex items-center justify-between gap-7 min-sm:-mt-2">
+      <div class="inline-flex items-center justify-between gap-7 sm:-mt-2">
         <SwitchTheme class="-m-2.5 size-6 p-2.5" />
         <MobileNavButton
           id="mobile-nav-button"
-          class="-m-2.5 size-6 p-2.5 min-sm:hidden"
+          class="-m-2.5 size-6 p-2.5 sm:hidden"
           ariaControls="mobile-nav"
         />
       </div>
@@ -52,7 +52,7 @@ import SwitchTheme from "./SwitchTheme.astro";
 
   <nav
     id="mobile-nav"
-    class="pointer-events-none fixed top-16 right-0 h-[calc(100vh-4rem)] w-full translate-x-full transform bg-white px-4 transition-transform duration-200 ease-in-out min-sm:hidden dark:bg-black"
+    class="pointer-events-none fixed top-16 right-0 h-[calc(100vh-4rem)] w-full translate-x-full transform bg-white px-4 transition-transform duration-200 ease-in-out sm:hidden dark:bg-black"
     aria-hidden="true"
   >
     <div class="text-primary-800 dark:text-primary-200 flex flex-col pb-2">
