@@ -52,9 +52,8 @@
   const giscusScript = document.getElementById(
     "giscus-script"
   ) as HTMLScriptElement | null;
-  const giscusFrame = document.querySelector(
-    ".giscus-frame"
-  ) as HTMLIFrameElement | null;
+  const getGiscusFrame = (): HTMLIFrameElement | null =>
+    document.querySelector(".giscus-frame");
   const giscusComments = document.getElementById(
     "giscus-comments"
   ) as HTMLElement | null;
@@ -70,7 +69,7 @@
 
     giscusScript?.setAttribute("data-theme", theme);
 
-    giscusFrame?.contentWindow?.postMessage(
+    getGiscusFrame()?.contentWindow?.postMessage(
       { giscus: { setConfig: { theme } } },
       "https://giscus.app"
     );
@@ -92,7 +91,7 @@
 
     giscusComments?.setAttribute("aria-hidden", "false");
 
-    giscusFrame?.setAttribute("title", "Comentários");
+    getGiscusFrame()?.setAttribute("title", "Comentários");
 
     const scrollHeight = giscusComments?.scrollHeight ?? 0;
 
