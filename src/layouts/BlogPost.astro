@@ -50,44 +50,38 @@ const authors = await getCollection("authors");
 
             <div class="text-secondary-700 dark:text-secondary-300 mb-2">
               <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="italic">
-                    Última atualização em <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
+              {updatedDate && (
+                <div class="italic">
+                  Última atualização em <FormattedDate date={updatedDate} />
+                </div>
+              )}
             </div>
 
-            <div
-              class="after:from-primary-50 dark:after:from-primary-950 relative after:absolute after:inset-y-0 after:right-0 after:w-1 after:bg-linear-to-l after:to-transparent"
-            >
+            <div class="after:from-primary-50 dark:after:from-primary-950 relative after:absolute after:inset-y-0 after:right-0 after:w-1 after:bg-linear-to-l after:to-transparent">
               <div class="mb-2 flex gap-4 overflow-x-auto py-2">
-                {
-                  authorsNames.map((authorName) => {
-                    const author = authors.find(
-                      (author) => author.data.name === authorName
-                    ) as Author;
+                {authorsNames.map((authorName) => {
+                  const author = authors.find(
+                    (author) => author.data.name === authorName,
+                  ) as Author;
 
-                    return (
-                      <a
-                        href={`/author/${author.id}`}
-                        class="inline-flex shrink-0 gap-2"
-                      >
-                        <Image
-                          src={author.data.avatar}
-                          alt=""
-                          height={254}
-                          width={254}
-                          class="size-10 rounded-full"
-                        />
-                        <p class="text-primary-800 dark:text-primary-200 my-auto whitespace-nowrap">
-                          {author.data.name}
-                        </p>
-                      </a>
-                    );
-                  })
-                }
+                  return (
+                    <a
+                      href={`/author/${author.id}`}
+                      class="inline-flex shrink-0 gap-2"
+                    >
+                      <Image
+                        src={author.data.avatar}
+                        alt=""
+                        height={254}
+                        width={254}
+                        class="size-10 rounded-full"
+                      />
+                      <p class="text-primary-800 dark:text-primary-200 my-auto whitespace-nowrap">
+                        {author.data.name}
+                      </p>
+                    </a>
+                  );
+                })}
               </div>
             </div>
 

@@ -12,31 +12,36 @@ import SwitchTheme from "./SwitchTheme.astro";
     id="nav-bar"
     class="shadow-primary-800/5 dark:shadow-primary-200/5 flex h-16 items-center justify-between bg-white px-4 shadow-[0_2px_8px] dark:bg-black"
   >
-    <a href="/" class="inline-flex items-end gap-0.25">
-      <Logo
-        class="fill-primary-800 hover:fill-primary-900 dark:fill-primary-200 dark:hover:fill-primary-100 w-6"
-      />
+    <a href="/" class="inline-flex items-end gap-px">
+      <Logo class="fill-primary-800 hover:fill-primary-900 dark:fill-primary-200 dark:hover:fill-primary-100 w-6" />
       <span
         class="text-primary-800 dark:text-primary-200 text-xl font-bold max-sm:hidden"
         aria-label={SITE_TITLE}
-        >log <span class="capitalize">universo temático</span></span
       >
+        log <span class="capitalize">universo temático</span>
+      </span>
     </a>
 
     <div class="flex gap-5">
       <div class="text-primary-800 dark:text-primary-200 max-sm:hidden">
         <HeaderLink
           class="[&.active]:border-b-tertiary-900 dark:[&.active]:border-b-tertiary-200 border-b-4 border-transparent px-2 py-4 text-lg text-inherit"
-          href="/">Home</HeaderLink
+          href="/"
         >
+          Home
+        </HeaderLink>
         <HeaderLink
           class="[&.active]:border-b-tertiary-900 dark:[&.active]:border-b-tertiary-200 border-b-4 border-transparent px-2 py-4 text-lg text-inherit"
-          href="/blog">Blog</HeaderLink
+          href="/blog"
         >
+          Blog
+        </HeaderLink>
         <HeaderLink
           class="[&.active]:border-b-tertiary-900 dark:[&.active]:border-b-tertiary-200 border-b-4 border-transparent px-2 py-4 text-lg text-inherit"
-          href="/about">Sobre</HeaderLink
+          href="/about"
         >
+          Sobre
+        </HeaderLink>
       </div>
 
       <div class="inline-flex items-center justify-between gap-7 sm:-mt-2">
@@ -58,21 +63,25 @@ import SwitchTheme from "./SwitchTheme.astro";
     <div class="text-primary-800 dark:text-primary-200 flex flex-col pb-2">
       <HeaderLink
         class="py-4 text-center text-base font-semibold text-inherit"
-        href="/">Home</HeaderLink
+        href="/"
       >
+        Home
+      </HeaderLink>
       <HeaderLink
         class="py-4 text-center text-base font-semibold text-inherit"
-        href="/blog">Blog</HeaderLink
+        href="/blog"
       >
+        Blog
+      </HeaderLink>
       <HeaderLink
         class="py-4 text-center text-base font-semibold text-inherit"
-        href="/about">Sobre</HeaderLink
+        href="/about"
       >
+        Sobre
+      </HeaderLink>
     </div>
     <hr />
-    <div
-      class="text-primary-800 dark:text-primary-200 flex justify-around gap-4 px-4 py-6"
-    >
+    <div class="text-primary-800 dark:text-primary-200 flex justify-around gap-4 px-4 py-6">
       <a
         class="-m-2.5 p-2.5 text-inherit"
         href="https://x.com/erickleite338"

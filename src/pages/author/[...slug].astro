@@ -25,4 +25,6 @@ const { author } = Astro.props;
 const { Content } = await render(author);
 ---
 
-<Author {...author.data}><Content /></Author>
+<Author {...author.data}>
+  <Content />
+</Author>

@@ -24,7 +24,7 @@ Por que isso importa? Em uma era de big data e IA, eficiência não é luxo — 
   <summary>
     Índice de Batalhas pela Otimização
   </summary>
-  
+
   <ul>
     <li><a href="#exemplo-1-busca-em-uma-lista--linear-vs-binária">Exemplo 1</a>: Busca em uma Lista — <a href="#versão-trivial-busca-linear">Linear</a> vs <a href="#versão-eficiente-busca-binária">Binária</a> 🔍</li>
     <li><a href="#exemplo-2-ordenação-de-elementos--bubble-sort-vs-quick-sort--vs">Exemplo 2</a>: Ordenação de Elementos — <a href="#versão-trivial-bubble-sort">Bubble Sort</a> vs <a href="#versão-eficiente-quick-sort">Quick Sort</a> 🛁 vs ⚡</li>

@@ -20,7 +20,9 @@ const { title, description, image = FallbackImage } = Astro.props;
 ---
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTHEH493GL"
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZTHEH493GL"
 ></script>
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
@@ -38,7 +40,7 @@ const { title, description, image = FallbackImage } = Astro.props;
     "dark",
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
-        matchMedia("(prefers-color-scheme: dark)").matches)
+        matchMedia("(prefers-color-scheme: dark)").matches),
   );
 </script>
 

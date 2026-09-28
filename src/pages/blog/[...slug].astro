@@ -20,12 +20,12 @@ const authors = await getCollection("authors");
 // Assegurar que todos os autores presentes no post existam na coleção de autores.
 post.data.authorsNames.forEach((authorName) => {
   const authorExists = authors.some(
-    (author) => author.data.name === authorName
+    (author) => author.data.name === authorName,
   );
 
   if (!authorExists) {
     throw new Error(
-      `Autor '${authorName}' não encontrado em 'src/content/authors'.`
+      `Autor '${authorName}' não encontrado em 'src/content/authors'.`,
     );
   }
 });

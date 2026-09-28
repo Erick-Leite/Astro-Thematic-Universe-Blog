@@ -2,15 +2,15 @@
   <button
     id="giscus-comments-button"
     class:list={[
-      "order-2 -mt-[16px] w-full rounded-lg p-1.5 text-center font-medium",
+      "order-2 -mt-4 w-full rounded-lg p-1.5 text-center font-medium",
       "before:bg-primary-50 dark:before:bg-primary-950 relative before:absolute before:inset-0 before:-z-1",
       "from-primary-800 to-primary-600 hover:from-primary-900 hover:to-primary-700 dark:from-primary-200 dark:to-primary-400 dark:hover:from-primary-100 dark:hover:to-primary-300 bg-linear-to-b",
     ]}
-    ><span
-      class="from-primary-200 to-primary-50 dark:from-primary-800 dark:to-primary-950 bg-linear-to-b bg-clip-text text-transparent"
-      >Carregar comentários</span
-    ></button
   >
+    <span class="from-primary-200 to-primary-50 dark:from-primary-800 dark:to-primary-950 bg-linear-to-b bg-clip-text text-transparent">
+      Carregar comentários
+    </span>
+  </button>
 
   <section
     id="giscus-comments"
@@ -18,8 +18,7 @@
     style="height: 0; overflow: hidden; transition: height 0.3s ease-in-out;"
     aria-hidden="true"
     tabindex="-1"
-  >
-  </section>
+  ></section>
 </div>
 
 <script
@@ -37,7 +36,8 @@
   data-theme="light"
   data-lang="pt"
   crossorigin="anonymous"
-  async></script>
+  async
+></script>
 
 <script is:inline>
   const giscusScript = document.getElementById("giscus-script");
@@ -50,15 +50,15 @@
 
 <script>
   const giscusScript = document.getElementById(
-    "giscus-script"
+    "giscus-script",
   ) as HTMLScriptElement | null;
   const getGiscusFrame = (): HTMLIFrameElement | null =>
     document.querySelector(".giscus-frame");
   const giscusComments = document.getElementById(
-    "giscus-comments"
+    "giscus-comments",
   ) as HTMLElement | null;
   const giscusCommentsButton = document.getElementById(
-    "giscus-comments-button"
+    "giscus-comments-button",
   ) as HTMLButtonElement | null;
 
   const getTheme = (): string =>
@@ -71,7 +71,7 @@
 
     getGiscusFrame()?.contentWindow?.postMessage(
       { giscus: { setConfig: { theme } } },
-      "https://giscus.app"
+      "https://giscus.app",
     );
   };
 
@@ -107,7 +107,7 @@
 
         giscusComments.removeEventListener(
           "transitionend",
-          handleTransitionEnd
+          handleTransitionEnd,
         );
       }
     };
