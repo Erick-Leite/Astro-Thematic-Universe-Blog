@@ -88,15 +88,6 @@
     @apply font-roboto-variable my-6 block w-full border-collapse overflow-x-auto text-left;
   }
 
-  thead,
-  tbody {
-    @apply table w-full;
-  }
-
-  tr {
-    @apply table-row min-w-full;
-  }
-
   thead {
     @apply bg-primary-200 dark:bg-primary-800;
   }
